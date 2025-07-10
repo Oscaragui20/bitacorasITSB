@@ -1,0 +1,119 @@
+/* Fondo suave en tono verde lechuga (#b7e7a6) */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #b7e7a6, #d9f8c4, #ffffff);
+    background-size: 300% 300%;
+    animation: fondoLechuga 12s ease infinite;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Animación suave del fondo */
+@keyframes fondoLechuga {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Contenedor de formulario */
+.container {
+    background: #ffffffdd;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 36px;
+    margin-top: 60px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    max-width: 920px;
+    width: 95%;
+    color: #1b1b1b;
+}
+
+/* Título */
+h2 {
+    color: #4caf50; /* Verde moderno */
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+/* Etiquetas */
+label.form-label {
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+/* Inputs */
+.form-control,
+.form-select {
+    background-color: #f9fff6;
+    border: 1px solid #c5e1a5;
+    border-radius: 10px;
+    color: #000;
+    font-size: 0.95em;
+    padding: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #aed581;
+    box-shadow: 0 0 6px rgba(139, 195, 74, 0.25);
+    background-color: #ffffff;
+    color: #000;
+    outline: none;
+}
+
+/* Botones */
+.btn-primary {
+    background: linear-gradient(45deg, #cddc39, #aed581);
+    color: #1b5e20;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9em;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #9ccc65, #cddc39);
+    transform: scale(1.02);
+}
+
+.btn-secondary {
+    background-color: #e8f5e9;
+    color: #33691e;
+    border: 1px solid #c5e1a5;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-left: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #c8e6c9;
+}
+
+/* Mensajes de error */
+.alert-danger {
+    background-color: #fffde7;
+    color: #e65100;
+    border: 1px solid #ffecb3;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.85em;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 24px;
+    }
+}
