@@ -76,6 +76,8 @@ DB_DATABASE=bitacoras
 DB_USERNAME=root
 DB_PASSWORD=
 
+# la base de datos esta en al carpeta de /database_backup
+
 # Generar la clave de aplicación
 php artisan key:generate
 
