@@ -48,7 +48,15 @@ El **Sistema de Bitácoras ITSB** es una aplicación web desarrollada en Laravel
 
 ---
 
+## 📚 Documentación
+
+Los siguientes documentos están incluidos en la carpeta `/documentacion`:
+
+- 📄 [Manual Técnico](documentacion/Manual_Tecnico_BitacorasITSB.pdf)
+- 👥 [Manual de Usuario](documentacion/Manual_Usuario_BitacorasITSB.pdf)
 ## ⚙️ Instalación del sistema
+
+---
 
 ```bash
 # Clonar el repositorio
@@ -78,9 +86,24 @@ php artisan migrate
 php artisan serve
 
 
-## 📚 Documentación
 
-Los siguientes documentos están incluidos en la carpeta `/documentacion`:
+# Paso a paso para crear un nuevo usuario con Tinker:  
+php artisan tinker
 
-- 📄 [Manual Técnico](documentacion/Manual_Tecnico_BitacorasITSB.pdf)
-- 👥 [Manual de Usuario](documentacion/Manual_Usuario_BitacorasITSB.pdf)
+# Una vez dentro, copia y pega este código (este codigo es para crear un ADMIN):
+\App\Models\Usuario::create([
+    'nombre' => 'admin2',
+    'contraseña' => bcrypt('admin123'),
+    'rol' => 'admin'
+]);
+# Presiona Enter y el usuario ADMIN se creará en tu base de datos.
+
+# PARA CREAR UN USUARIO COMUN
+
+\App\Models\Usuario::create([
+    'nombre' => 'maria',
+    'contraseña' => bcrypt('maria123'),
+    'rol' => 'usuario'
+]);
+
+# Presiona Enter y el usuario se creará en tu base de datos.
