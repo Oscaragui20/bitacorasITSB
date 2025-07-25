@@ -76,7 +76,7 @@ DB_DATABASE=bitacoras
 DB_USERNAME=root
 DB_PASSWORD=
 
-# la base de datos esta en al carpeta de /database_backup
+
 
 # Generar la clave de aplicación
 php artisan key:generate
@@ -94,7 +94,7 @@ php artisan tinker
 
 # Una vez dentro, copia y pega este código (este codigo es para crear un ADMIN):
 \App\Models\Usuario::create([
-    'nombre' => 'admin2',
+    'nombre' => 'admin',
     'contraseña' => bcrypt('admin123'),
     'rol' => 'admin'
 ]);
@@ -103,8 +103,8 @@ php artisan tinker
 # PARA CREAR UN USUARIO COMUN
 
 \App\Models\Usuario::create([
-    'nombre' => 'maria',
-    'contraseña' => bcrypt('maria123'),
+    'nombre' => 'oscar',
+    'contraseña' => bcrypt('oscar123'),
     'rol' => 'usuario'
 ]);
 
